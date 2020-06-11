@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./styles.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="icon" href="./assets/images/drum.png" />
+		<title>Beat Maker</title>
+	</head>
+	<body>
+		<main class="main">
+			<header class="header">
+				<div class="control-container">
+					<h2 class="control" id="start">START</h2>
+					<div class="reset-container">
+						<h2 class="control" id="restart">RESTART</h2>
+						<h2 class="control" id="reset">RESET</h2>
+					</div>
+					<div class="reset-container">
+						<h2 class="control">BPM</h2>
+						<input type="number" class="bpm" value="100" />
+					</div>
+				</div>
+				<h1 class="title">Beat Maker</h1>
+			</header>
+			<div class="drum-container">
+				<div class="drum">
+					<div class="name-container">
+						<h2 class="drum-name">Crash</h2>
+						<audio src="./assets/sounds/crash.wav" id="crash"></audio>
+					</div>
+					<div class="beat-container">
+						<div class="beat-box crash" data-drum="crash"></div>
+						<div class="beat-box crash" data-drum="crash"></div>
+						<div class="beat-box crash" data-drum="crash"></div>
+						<div class="beat-box crash" data-drum="crash"></div>
+						<div class="beat-box crash" data-drum="crash"></div>
+						<div class="beat-box crash" data-drum="crash"></div>
+						<div class="beat-box crash" data-drum="crash"></div>
+						<div class="beat-box crash" data-drum="crash"></div>
+					</div>
+				</div>
+				<div class="drum">
+					<div class="name-container">
+						<h2 class="drum-name">Hi-Hat</h2>
+						<audio src="./assets/sounds/hihat.wav" id="hihat"></audio>
+					</div>
+					<div class="beat-container">
+						<div class="beat-box hihat" data-drum="hihat"></div>
+						<div class="beat-box hihat" data-drum="hihat"></div>
+						<div class="beat-box hihat" data-drum="hihat"></div>
+						<div class="beat-box hihat" data-drum="hihat"></div>
+						<div class="beat-box hihat" data-drum="hihat"></div>
+						<div class="beat-box hihat" data-drum="hihat"></div>
+						<div class="beat-box hihat" data-drum="hihat"></div>
+						<div class="beat-box hihat" data-drum="hihat"></div>
+					</div>
+				</div>
+				<div class="drum">
+					<div class="name-container">
+						<h2 class="drum-name">Snare</h2>
+						<audio src="./assets/sounds/snare.wav" id="snare"></audio>
+					</div>
+					<div class="beat-container">
+						<div class="beat-box snare" data-drum="snare"></div>
+						<div class="beat-box snare" data-drum="snare"></div>
+						<div class="beat-box snare" data-drum="snare"></div>
+						<div class="beat-box snare" data-drum="snare"></div>
+						<div class="beat-box snare" data-drum="snare"></div>
+						<div class="beat-box snare" data-drum="snare"></div>
+						<div class="beat-box snare" data-drum="snare"></div>
+						<div class="beat-box snare" data-drum="snare"></div>
+					</div>
+				</div>
+				<div class="drum">
+					<div class="name-container">
+						<h2 class="drum-name">Kick</h2>
+						<audio src="./assets/sounds/kick.wav" id="kick"></audio>
+					</div>
+					<div class="beat-container">
+						<div class="beat-box kick" data-drum="kick"></div>
+						<div class="beat-box kick" data-drum="kick"></div>
+						<div class="beat-box kick" data-drum="kick"></div>
+						<div class="beat-box kick" data-drum="kick"></div>
+						<div class="beat-box kick" data-drum="kick"></div>
+						<div class="beat-box kick" data-drum="kick"></div>
+						<div class="beat-box kick" data-drum="kick"></div>
+						<div class="beat-box kick" data-drum="kick"></div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script src="app.js"></script>
+	</body>
+</html>
