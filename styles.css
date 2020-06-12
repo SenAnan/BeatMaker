@@ -1,3 +1,9 @@
+:root {
+	--color-primary: #ccc624;
+	--color-secondary: rgb(236, 98, 43);
+	--font-primary: 'Special Elite', cursive;
+}
+
 * {
 	box-sizing: border-box;
 	padding: 0;
@@ -6,7 +12,7 @@
 
 html {
 	font-size: 62.5%;
-	color: #ccc624;
+	color: var(--color-primary);
 	font-family: 'Special Elite', cursive;
 }
 
@@ -47,7 +53,7 @@ html {
 }
 
 #restart {
-	color: rgb(236, 98, 43);
+	color: var(--color-secondary);
 }
 #reset {
 	color: red;
@@ -78,13 +84,13 @@ html {
 	font-size: 4rem;
 	font-family: 'Special Elite', cursive;
 	background-color: rgba(0, 0, 0, 0.7);
-	border: 1px solid #ccc624;
-	color: orange;
+	border: 1px solid var(--color-primary);
+	color: var(--color-secondary);
 	text-align: center;
 }
 
 .bpm::selection {
-	background-color: #ccc624;
+	background-color: var(--color-primary);
 	color: red;
 }
 
@@ -125,7 +131,7 @@ html {
 }
 
 .beat-box {
-	border: 1px solid #ccc624;
+	border: 1px solid var(--color-primary);
 	height: 80%;
 	width: 80%;
 	cursor: pointer;
@@ -134,12 +140,12 @@ html {
 }
 
 .filled {
-	background-color: #ccc624;
+	background-color: var(--color-primary);
 }
 
 .onBeat {
 	border-width: 5px;
-	border-color: rgb(236, 98, 43);
+	border-color: var(--color-secondary);
 }
 
 .red-text {

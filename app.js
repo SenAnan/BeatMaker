@@ -1,3 +1,4 @@
+// DOM ELEMENTS
 const beatboxes = document.querySelectorAll('.beat-box');
 const crashes = document.querySelectorAll('.crash');
 const hihats = document.querySelectorAll('.hihat');
@@ -16,11 +17,15 @@ const drumSounds = {
 	kick: document.getElementById('kick'),
 };
 
+// GLOBAL VARIABLES
 let isPlaying = false;
 let musicTimer;
 let beat = -1;
 let bpm = 100;
 
+// FUNCTIONALITY
+
+// Highlights beat box on selection
 const selectBeat = (e) => {
 	e.target.classList.toggle('filled');
 };
@@ -28,6 +33,7 @@ beatboxes.forEach((el) => {
 	el.addEventListener('click', selectBeat);
 });
 
+// Start and stops the timer
 const toggleBeats = (e) => {
 	e.target.textContent = isPlaying ? 'START' : 'STOP';
 	e.target.classList.toggle('red-text');
@@ -40,10 +46,12 @@ const toggleBeats = (e) => {
 };
 startButton.addEventListener('click', toggleBeats);
 
+// Timer based on BPM input
 const playBeats = () => {
 	musicTimer = setInterval(moveBeat, (60 / bpm) * 1000);
 };
 
+// Highlights current beat and plays sounds of those selected
 const moveBeat = () => {
 	if (beat != -1) {
 		let onBeat = [crashes[beat], hihats[beat], snares[beat], kicks[beat]];
@@ -63,6 +71,7 @@ const moveBeat = () => {
 	});
 };
 
+// Restarts beat counter to beginning
 const restartBeats = () => {
 	if (beat != -1) {
 		let onBeat = [crashes[beat], hihats[beat], snares[beat], kicks[beat]];
@@ -74,6 +83,7 @@ const restartBeats = () => {
 };
 restartButton.addEventListener('click', restartBeats);
 
+// Resets board
 const resetBeats = () => {
 	beatboxes.forEach((el) => {
 		el.classList.remove('filled');
@@ -83,6 +93,7 @@ const resetBeats = () => {
 };
 resetButton.addEventListener('click', resetBeats);
 
+// Change bpm from input
 bpmInput.addEventListener('change', (e) => {
 	if (e.target.value < 40 || e.target.value > 200) {
 		alert('Please specify bpm between 40 and 200 only');
@@ -96,6 +107,7 @@ bpmInput.addEventListener('change', (e) => {
 	}
 });
 
+// Respond to keyboard input
 bpmInput.addEventListener('keyup', (e) => {
 	bpm = e.target.value;
 	if (isPlaying) {
